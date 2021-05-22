@@ -10,7 +10,7 @@ class UrlRedirectAdmin(admin.ModelAdmin):
 
 @admin.register(UrlLog)
 class UrlLogAdmin(admin.ModelAdmin):
-    list_display2 = ('origem', 'criado_em', 'user_agente','Host', 'ip', 'url_redirect')
+    list_display = ('origem', 'criado_em', 'user_agent', 'host', 'ip', 'url_redirect')
     def has_change_permission(self, request, obj=None):
         return False
     #este acima, serve para dar permissão de alteração, sobre o url log por exemplo
